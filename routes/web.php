@@ -16,6 +16,31 @@ use Inertia\Inertia;
 |
 */
 
+Route::get('/ClassList', function () {
+    return Inertia::render('ClassList', []);
+});
+Route::get('/AddClass', function () {
+    return Inertia::render('AddClass', []);
+});
+Route::get('/EditClass', function () {
+    return Inertia::render('EditClass', []);
+});
+Route::get('/TeacherList', function () {
+    return Inertia::render('TeacherList', []);
+});
+Route::get('/AddTeacher', function () {
+    return Inertia::render('AddTeacher', []);
+});
+Route::get('/EditTeacher', function () {
+    return Inertia::render('EditTeacher', []);
+});
+Route::get('/SemesterList', function () {
+    return Inertia::render('SemesterList', []);
+});
+Route::get('/AddClassToSemester', function () {
+    return Inertia::render('AddClassToSemester', []);
+});
+
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
