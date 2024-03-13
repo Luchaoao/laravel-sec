@@ -40,6 +40,9 @@ Route::get('/SemesterList', function () {
 Route::get('/AddClassToSemester', function () {
     return Inertia::render('AddClassToSemester', []);
 });
+Route::get('/EditAddClassToSemester', function () {
+    return Inertia::render('EditAddClassToSemester', []);
+});
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [

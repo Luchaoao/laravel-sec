@@ -15,11 +15,11 @@ export default {
 
 <template>
 
-    <Head title="AddClassToSemester" />
+    <Head title="EditAddClassToSemester" />
 
     <AuthenticatedLayout>
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">課程新增至本學期</h2>
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">編輯課程</h2>
         </template>
 
         <div class="py-8">
