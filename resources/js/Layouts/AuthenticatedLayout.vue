@@ -38,7 +38,7 @@ const showingNavigationDropdown = ref(false);
                                 <NavLink href='/TeacherList'>
                                     教師管理
                                 </NavLink>
-                                <NavLink href='/SemesterList'>
+                                <NavLink href='/AddClassToSemester'>
                                     學期排課
                                 </NavLink>
                             </div>
@@ -130,7 +130,7 @@ const showingNavigationDropdown = ref(false);
                         <ResponsiveNavLink href='/TeacherList'>
                             教師管理
                         </ResponsiveNavLink>
-                        <ResponsiveNavLink href='/SemesterList'>
+                        <ResponsiveNavLink href='/AddClassToSemester'>
                             學期排課
                         </ResponsiveNavLink>
                     </div>
