@@ -32,13 +32,13 @@ const showingNavigationDropdown = ref(false);
                                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     儀表板
                                 </NavLink>
-                                <NavLink :href="route('dashboard')">
+                                <NavLink href='/ClassList'>
                                     課程管理
                                 </NavLink>
-                                <NavLink :href="route('dashboard')">
+                                <NavLink href='/TeacherList'>
                                     教師管理
                                 </NavLink>
-                                <NavLink :href="route('dashboard')">
+                                <NavLink href='/SemesterList'>
                                     學期排課
                                 </NavLink>
                             </div>
@@ -123,6 +123,15 @@ const showingNavigationDropdown = ref(false);
                     <div class="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                             Dashboard
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink href='/ClassList'>
+                            課程管理
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink href='/TeacherList'>
+                            教師管理
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink href='/SemesterList'>
+                            學期排課
                         </ResponsiveNavLink>
                     </div>
 

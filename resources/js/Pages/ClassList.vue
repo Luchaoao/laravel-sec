@@ -10,7 +10,21 @@ export default {
         return {
             bgc: bgc,
         }
-    }
+    },
+    props: {
+        response: {
+            type: Object,
+        },
+    },
+    methods: {
+        addClass() {
+            this.$inertia.visit('/AddClass');
+        },
+        
+        editClass() {
+            this.$inertia.visit('/EditClass');
+        }
+    },
 }
 </script>
 
@@ -25,7 +39,7 @@ export default {
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-2">
-                    <div class="w-[50px] text-white bg-blue-500 p-2 rounded cursor-pointer">新增</div>
+                    <div class="w-[50px] text-white bg-blue-500 p-2 rounded cursor-pointer" @click="addClass">新增</div>
                     <div class="mt-10 text-center">
                     <table>
                         <thead class="border border-black">
@@ -37,15 +51,15 @@ export default {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="border border-black">1</td>
-                                <td class="border border-black">國語</td>
+                            <tr v-for="index in response.id" :key="response.id">
+                                <td class="border border-black">{{ index }}</td>
+                                <td class="border border-black">{{ response.className }}</td>
                                 <td class="border border-black">
                                     <img :src="bgc" alt="">
                                 </td>
                                 <td class="border border-black">
                                     <div class="flex flex-col items-center">
-                                        <div class="w-[50px] bg-blue-500 p-2 rounded mb-3 text-white cursor-pointer">編輯</div>
+                                        <div class="w-[50px] bg-blue-500 p-2 rounded mb-3 text-white cursor-pointer" @click="editClass(response.id)">編輯</div>
                                     <div  class="w-[50px] bg-red-500 p-2 rounded text-white cursor-pointer">刪除</div>
                                     </div>
                                     
