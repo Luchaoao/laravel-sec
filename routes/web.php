@@ -32,25 +32,25 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/add-class',[ClassController::class, 'add']);
 
     Route::get('/EditClass', function () {
-        return Inertia::render('EditClass', []);
+        return Inertia::render('EditClass');
     });
     Route::get('/TeacherList', function () {
-        return Inertia::render('TeacherList', []);
+        return Inertia::render('TeacherList');
     });
     Route::get('/AddTeacher', function () {
-        return Inertia::render('AddTeacher', []);
+        return Inertia::render('AddTeacher');
     });
     Route::get('/EditTeacher', function () {
-        return Inertia::render('EditTeacher', []);
+        return Inertia::render('EditTeacher');
     });
     Route::get('/SemesterList', function () {
-        return Inertia::render('SemesterList', []);
+        return Inertia::render('SemesterList');
     });
     Route::get('/AddClassToSemester', function () {
-        return Inertia::render('AddClassToSemester', []);
+        return Inertia::render('AddClassToSemester');
     });
     Route::get('/EditAddClassToSemester', function () {
-        return Inertia::render('EditAddClassToSemester', []);
+        return Inertia::render('EditAddClassToSemester');
     });
 });
 
